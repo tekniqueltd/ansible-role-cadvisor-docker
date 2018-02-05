@@ -11,6 +11,7 @@ services:
     ports:
       - {{ cadvisor_docker_expose_port }}:8080
     restart: always
+    # Uncomment lines below for interactive debugging with `docker attach`
     #stdin_open: true
     #command: /bin/bash
     #tty: true
