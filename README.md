@@ -3,7 +3,7 @@ Ansible Role: cadvisor-cadvisor-docker
 
 [![Build Status](https://travis-ci.org/teknique/ansible-role-cadvisor-docker.svg?branch=master)](https://travis-ci.org/teknique/ansible-role-cadvisor-docker)
 
-Ansible role that installs cadvisor-docker, cadvisor-docker-compose and all required dependencies on Debian and Ubuntu.
+Ansible role that deploys cadvisor using docker and docker-compose.
 
 
 ## Supported Operating Systems
@@ -13,7 +13,8 @@ Ansible role that installs cadvisor-docker, cadvisor-docker-compose and all requ
 
 ## Requirements
 
-- Ansible 2.4+
+- Ansible 2.4+ (on execution host)
+- Docker 17+ (on remote host)
 
 ## Role Variables
 
