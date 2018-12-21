@@ -41,6 +41,7 @@
   become: yes
   become_user: "{{ cadvisor_docker_user }}"
   register: start_cadvisor_docker
+  when: (cadvisor_docker_start|bool)
   tags:
     - cadvisor_docker
     - cadvisor_docker_deploy
