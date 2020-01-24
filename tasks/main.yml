@@ -35,7 +35,7 @@
     - cadvisor_docker_testing
 
 - name: Start cadvisor docker
-  docker_service:
+  docker_compose:
     project_src: "{{ cadvisor_docker_directory }}"
     state: present
   become: yes
