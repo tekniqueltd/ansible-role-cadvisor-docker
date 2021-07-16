@@ -34,8 +34,15 @@
     - cadvisor_docker_deploy
     - cadvisor_docker_testing
 
+- name: Pip install docker for Ansible's docker_service module
+  become: yes
+  become_user: "{{ cadvisor_docker_user }}"
+  pip:
+    name: ["docker", "docker-compose"]
+
+
 - name: Start cadvisor docker
-  docker_service:
+  docker_compose:
     project_src: "{{ cadvisor_docker_directory }}"
     state: present
   become: yes
